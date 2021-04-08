@@ -7,7 +7,7 @@
 --macro nullSafety("speller", Strict)
 -main Main
 
--lib speller
+-lib sinker
 -lib utest
 -lib buddy
 
