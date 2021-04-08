@@ -1,0 +1,32 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": false,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "codedox": {
+    "commentbegin": "/**",
+    "commentprefix": "\t",
+    "commentend": "**/",
+    "autoPrefixOnEnter": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.sortImports": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false,
+    "editor.tabSize": 4,
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": false
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}

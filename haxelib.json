@@ -1,0 +1,18 @@
+{
+	"name": "speller",
+	"url": "https://github.com/fal-works/speller/",
+	"license": "MIT",
+	"tags": [
+		"utility"
+	],
+	"description": "Small library for string operation.",
+	"version": "0.1.0",
+	"classPath": "src/",
+	"releasenote": "Initial release. Everything may change in future.",
+	"contributors": [
+		"fal-works"
+	],
+	"dependencies": {
+		"sinker": ""
+	}
+}

@@ -1,0 +1,14 @@
+# Common Build arguments
+
+-cp src
+-cp test
+-dce full
+
+--macro nullSafety("speller", Strict)
+-main Main
+
+-lib speller
+-lib utest
+-lib buddy
+
+--debug
