@@ -1,6 +1,6 @@
 package speller;
 
-using speller.extensions.StringExtension;
+import speller.extensions.StringExtension;
 
 /**
 	A `String` that is not empty (`""`) and has no leading or trailing whitespaces.
@@ -12,8 +12,8 @@ abstract NonEmptyTrimmedString(NonEmptyString) to NonEmptyString to String {
 	**/
 	@:access(speller.NonEmptyString)
 	public static inline function from(s: String): Maybe<NonEmptyTrimmedString> {
-		final trimmed = s.trim();
-		return if (trimmed.isEmpty()) Maybe.none() else
+		final trimmed = TrimmedString.from(s);
+		return if (StringExtension.isEmpty(trimmed)) Maybe.none() else
 			Maybe.from(new NonEmptyTrimmedString(new NonEmptyString(trimmed)));
 	}
 

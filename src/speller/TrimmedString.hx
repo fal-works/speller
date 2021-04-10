@@ -1,9 +1,5 @@
 package speller;
 
-import speller.NonEmptyString;
-
-using StringTools;
-
 /**
 	A `String` that has no leading or trailing whitespaces.
 **/
@@ -15,7 +11,7 @@ abstract TrimmedString(String) to String {
 	**/
 	@:from
 	public static inline function from(s: String): TrimmedString {
-		return new TrimmedString(s.trim());
+		return new TrimmedString(StringTools.trim(s));
 	}
 
 	@:op(A + B) function add(other: TrimmedString): TrimmedString;
