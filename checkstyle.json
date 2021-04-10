@@ -21,15 +21,6 @@
 			"props": {}
 		},
 		{
-			"type": "ArrowFunction",
-			"props": {
-				"allowReturn": false,
-				"allowFunction": false,
-				"allowCurlyBody": false,
-				"allowSingleArgParens": false
-			}
-		},
-		{
 			"type": "AvoidIdentifier",
 			"props": {
 				"avoidIdentifiers": []
@@ -54,26 +45,10 @@
 			}
 		},
 		{
-			"type": "CodeSimilarity",
-			"props": {
-				"severityIdentical": "WARNING",
-				"thresholdIdentical": 60,
-				"thresholdSimilar": 120
-			}
-		},
-		{
 			"type": "ConditionalCompilation",
 			"props": {
 				"policy": "aligned",
 				"allowSingleline": true
-			}
-		},
-		{
-			"type": "ConstantName",
-			"props": {
-				"format": "^[A-Z][A-Z0-9]*(_[A-Z0-9_]+)*$",
-				"tokens": [],
-				"ignoreExtern": true
 			}
 		},
 		{
@@ -101,10 +76,6 @@
 				"startStyle": "twostars",
 				"lineStyle": "none"
 			}
-		},
-		{
-			"type": "Dynamic",
-			"props": {}
 		},
 		{
 			"type": "ERegLiteral",
@@ -188,29 +159,6 @@
 			}
 		},
 		{
-			"type": "Indentation",
-			"props": {
-				"character": "tab",
-				"ignoreConditionals": false,
-				"conditionalPolicy": "aligned",
-				"ignoreComments": true,
-				"wrapPolicy": "larger"
-			}
-		},
-		{
-			"type": "IndentationCharacter",
-			"props": {
-				"character": "tab",
-				"ignorePattern": "^$"
-			}
-		},
-		{
-			"type": "InnerAssignment",
-			"props": {
-				"ignoreReturnAssignments": false
-			}
-		},
-		{
 			"type": "Interface",
 			"props": {
 				"allowMarkerInterfaces": true,
@@ -280,9 +228,22 @@
 		{
 			"type": "MemberName",
 			"props": {
+				"severity": "ERROR",
 				"format": "^[a-z][a-zA-Z0-9]*$",
-				"tokens": [],
-				"ignoreExtern": true
+				"tokens": [
+					"PUBLIC",
+					"PRIVATE",
+					"CLASS"
+				]
+			}
+		},
+		{
+			"type": "MemberName",
+			"props": {
+				"format": "^[A-Z][a-zA-Z0-9]*$",
+				"tokens": [
+					"ENUM"
+				]
 			}
 		},
 		{
@@ -323,22 +284,8 @@
 			}
 		},
 		{
-			"type": "MultipleStringLiterals",
-			"props": {
-				"allowDuplicates": 2,
-				"minLength": 2,
-				"ignore": "^\\s+$"
-			}
-		},
-		{
 			"type": "MultipleVariableDeclarations",
 			"props": {}
-		},
-		{
-			"type": "NestedControlFlow",
-			"props": {
-				"max": 3
-			}
 		},
 		{
 			"type": "NestedForDepth",
@@ -382,49 +329,6 @@
 			}
 		},
 		{
-			"type": "OperatorWrap",
-			"props": {
-				"tokens": [
-					"=",
-					"+",
-					"-",
-					"*",
-					"/",
-					"%",
-					">",
-					"<",
-					">=",
-					"<=",
-					"==",
-					"!=",
-					"&",
-					"|",
-					"^",
-					"&&",
-					"||",
-					"<<",
-					">>",
-					">>>",
-					"+=",
-					"-=",
-					"*=",
-					"/=",
-					"%=",
-					"<<=",
-					">>=",
-					">>>=",
-					"|=",
-					"&=",
-					"^=",
-					"...",
-					"=>",
-					"++",
-					"--"
-				],
-				"option": "eol"
-			}
-		},
-		{
 			"type": "ParameterName",
 			"props": {
 				"format": "^(_|[a-z][a-zA-Z0-9]*$)",
@@ -461,14 +365,6 @@
 				"enforcePublicPrivate": false,
 				"enforcePublic": false,
 				"enforcePrivate": false
-			}
-		},
-		{
-			"type": "Return",
-			"props": {
-				"allowEmptyReturn": true,
-				"enforceReturnType": false,
-				"enforceReturnTypeForAnonymous": false
 			}
 		},
 		{
@@ -539,13 +435,6 @@
 			}
 		},
 		{
-			"type": "StringLiteral",
-			"props": {
-				"policy": "doubleAndInterpolation",
-				"allowException": true
-			}
-		},
-		{
 			"type": "TODOComment",
 			"props": {
 				"format": "^\\s*(TODO|FIXME|HACK|XXX|BUG)"
@@ -558,10 +447,6 @@
 			}
 		},
 		{
-			"type": "Trace",
-			"props": {}
-		},
-		{
 			"type": "TrailingWhitespace",
 			"props": {}
 		},
@@ -569,18 +454,6 @@
 			"type": "Type",
 			"props": {
 				"ignoreEnumAbstractValues": true
-			}
-		},
-		{
-			"type": "TypeDocComment",
-			"props": {
-				"tokens": [
-					"ABSTRACT_DEF",
-					"CLASS_DEF",
-					"ENUM_DEF",
-					"INTERFACE_DEF",
-					"TYPEDEF_DEF"
-				]
 			}
 		},
 		{
@@ -596,18 +469,7 @@
 			"props": {}
 		},
 		{
-			"type": "UnusedImport",
-			"props": {
-				"ignoreModules": [],
-				"moduleTypeMap": {}
-			}
-		},
-		{
 			"type": "UnusedLocalVar",
-			"props": {}
-		},
-		{
-			"type": "VariableInitialisation",
 			"props": {}
 		},
 		{
