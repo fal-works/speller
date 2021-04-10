@@ -9,7 +9,7 @@ using speller.extensions.StringExtension;
 @:using(speller.extensions.StringExtension)
 abstract NonEmptyString(String) to String {
 	/**
-		Tries to convert `s` to `TrimmedString`.
+		Tries to convert `s` to `NonEmptyString`.
 	**/
 	public static inline function from(s: String): Maybe<NonEmptyString>
 		return maybe(if (s.isSome()) new NonEmptyString(s) else null);
