@@ -1,5 +1,8 @@
 package speller.extensions;
 
+/**
+	Static extension for `String`.
+**/
 class StringExtension {
 	/**
 		Alternative to `toLowerCase()` but returns `LowerCaseString` instead of `String`.
