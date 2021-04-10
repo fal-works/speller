@@ -4,13 +4,13 @@ class StringExtension {
 	/**
 		Alternative to `toLowerCase()` but returns `LowerCaseString` instead of `String`.
 	**/
-	public static extern inline function toLowerCaseString(s: String): LowerCaseString
+	public static extern inline function toLower(s: String): LowerCaseString
 		return LowerCaseString.from(s);
 
 	/**
 		Alternative to `toUpperCase()` but returns `UpperCaseString` instead of `String`.
 	**/
-	public static extern inline function toUpperCaseString(s: String): UpperCaseString
+	public static extern inline function toUpper(s: String): UpperCaseString
 		return UpperCaseString.from(s);
 
 	/**
@@ -32,8 +32,8 @@ class StringExtension {
 		return NonEmptyString.from(s);
 
 	/**
-		Removes leading and trailing whitespaces.
+		Alternative to `trim()` but returns `TrimmedString` instead of `String`.
 	**/
-	public static extern inline function trim(s: String): TrimmedString
+	public static extern inline function toTrimmed(s: String): TrimmedString
 		return TrimmedString.from(s);
 }
