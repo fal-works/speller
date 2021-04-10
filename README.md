@@ -14,6 +14,8 @@ Unstable!
 
 Abstracts based on `String`:
 
+- `speller.LowerCaseString`
+- `speller.UpperCaseString`
 - `speller.NonEmptyString`
 - `speller.TrimmedString`
 - `speller.NonEmptyTrimmedString`

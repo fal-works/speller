@@ -2,6 +2,18 @@ package speller.extensions;
 
 class StringExtension {
 	/**
+		Alternative to `toLowerCase()` but returns `LowerCaseString` instead of `String`.
+	**/
+	public static extern inline function toLowerCaseString(s: String): LowerCaseString
+		return LowerCaseString.from(s);
+
+	/**
+		Alternative to `toUpperCase()` but returns `UpperCaseString` instead of `String`.
+	**/
+	public static extern inline function toUpperCaseString(s: String): UpperCaseString
+		return UpperCaseString.from(s);
+
+	/**
 		@return `true` if this is an empty string (`""`).
 	**/
 	public static extern inline function isEmpty(s: String): Bool
