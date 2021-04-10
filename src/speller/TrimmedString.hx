@@ -29,6 +29,16 @@ abstract TrimmedString(String) to String {
 	public inline function toString(): String
 		return this;
 
+	@:inheritDoc
+	public inline function toLowerCase(): TrimmedString {
+		return new TrimmedString(this.toLowerCase());
+	}
+
+	@:inheritDoc
+	public inline function toUpperCase(): TrimmedString {
+		return new TrimmedString(this.toUpperCase());
+	}
+
 	inline function new(s: String)
 		this = s;
 }

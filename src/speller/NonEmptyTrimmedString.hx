@@ -35,6 +35,16 @@ abstract NonEmptyTrimmedString(NonEmptyString) to NonEmptyString to String {
 	public inline function toString(): String
 		return this;
 
+	@:inheritDoc
+	public inline function toLowerCase(): NonEmptyTrimmedString {
+		return new NonEmptyTrimmedString(this.toLowerCase());
+	}
+
+	@:inheritDoc
+	public inline function toUpperCase(): NonEmptyTrimmedString {
+		return new NonEmptyTrimmedString(this.toUpperCase());
+	}
+
 	/**
 		Casts `this` to `TrimmedString`.
 	**/

@@ -24,6 +24,16 @@ abstract NonEmptyString(String) to String {
 	public inline function toString(): String
 		return this;
 
+	@:inheritDoc
+	public inline function toLowerCase(): NonEmptyString {
+		return new NonEmptyString(this.toLowerCase());
+	}
+
+	@:inheritDoc
+	public inline function toUpperCase(): NonEmptyString {
+		return new NonEmptyString(this.toUpperCase());
+	}
+
 	inline function new(s: String)
 		this = s;
 }

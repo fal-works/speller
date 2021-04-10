@@ -21,6 +21,26 @@ abstract UpperCaseString(String) {
 	public inline function toString(): String
 		return this;
 
+	@:inheritDoc
+	public inline function charAt(index: UInt): UpperCaseString {
+		return new UpperCaseString(this.charAt(index));
+	}
+
+	@:inheritDoc
+	public inline function split(delimiter: String): Array<UpperCaseString> {
+		return cast this.split(delimiter);
+	}
+
+	@:inheritDoc
+	public inline function substr(pos: Int, ?len: UInt): UpperCaseString {
+		return new UpperCaseString(this.substr(pos, len));
+	}
+
+	@:inheritDoc
+	public inline function substring(start: UInt, ?end: UInt): UpperCaseString {
+		return new UpperCaseString(this.substring(start, end));
+	}
+
 	inline function new(s: String)
 		this = s;
 }
